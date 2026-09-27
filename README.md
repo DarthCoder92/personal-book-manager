@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Personal Book Manager
 
-## Getting Started
+A full-stack MERN application built with Next.js, Node.js/Express, MongoDB, and Tailwind CSS. Personal Book Manager provides readers with a clean, intuitive, and focused interface to manage their personal book collections, track reading habits, and filter books by tags and statuses.
 
-First, run the development server:
+🚀 Features
+Authentication & Authorization
+Secure Sign Up, Log In, and Log Out functionality using JSON Web Tokens (JWT).
+Protected routes and secure API endpoints to ensure user data privacy.
 
-```bash
+Book Collection Management
+Add Books: Add new titles with author details, tags, and current reading status.
+Edit & Delete: Update book information or remove books from the collection seamlessly.
+Status Tracking: Categorize books into three distinct statuses:
+📖 Want to Read
+📘 Reading
+✅ Completed
+Filtering & Search: Filter books by specific tags or reading status for quick access.
+
+Dashboard Insights
+Clean, clutter-free dashboard surfacing collection statistics (total books count, status summaries).
+Direct action controls to mark reading progress directly from the dashboard.
+
+🛠️ Tech Stack
+Frontend: Next.js (App Router), React.js, Tailwind CSS
+Backend: Node.js, Express.js / Next.js API Routes
+Database: MongoDB & Mongoose (MongoDB Atlas)
+Authentication: JSON Web Tokens (JWT) & bcrypt.js
+Deployment: Vercel (Frontend & API) + MongoDB Atlas (Database)
+
+📂 Project Structure
+personal-book-manager/
+├── public/                 # Static assets
+├── src/
+│   ├── app/                # Next.js App Router pages and layout
+│   ├── components/         # Reusable UI components (Dashboard, BookCard, Auth Forms)
+│   ├── lib/                # Database configuration, middleware, and utility functions
+│   ├── models/             # Mongoose schemas (User, Book)
+│   └── types/              # TypeScript interfaces/types
+├── .env.example            # Environment variable template
+├── package.json            # Project dependencies and scripts
+└── README.md               # Project documentation
+
+⚙️ Getting StartedPrerequisites
+
+Ensure you have the following installed on your machine:
+Node.js (v18.x or higher)
+npm or yarn
+A MongoDB Atlas account or local MongoDB instance.
+Installation
+Clone the Repository
+git clone https://github.com/DarthCoder92/personal-book-manager.git
+cd personal-book-manager
+Install Dependencies
+npm install
+Configure Environment Variables
+
+Create a .env.local file in the root directory based on .env.example:
+cp .env.example .env.local
+Run the Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open [link removed] in your browser to view the app.
+🔑 Environment Variables (.env.example)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Include the following key-value pairs in your .env.local or host settings:
+# MongoDB Connection String
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/personal_book_manager?retryWrites=true&w=majority
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# JWT Authentication Secret
+JWT_SECRET=your_super_secret_jwt_key_here
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GitHub Repository: https://github.com/DarthCoder92/personal-book-manager
